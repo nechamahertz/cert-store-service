@@ -1,0 +1,15 @@
+{
+    "context_is_admin": "role:admin",
+    "admin": "role:admin",
+    "observer": "role:observer",
+    "creator": "role:creator",
+    
+    "admin_or_creator": "rule:admin or rule:creator",
+    
+    "secret:decrypt": "rule:admin_or_creator",
+    "secret:get": "rule:admin_or_creator",
+    "secret:put": "rule:admin_or_creator",
+    "secret:delete": "rule:admin_or_creator",
+    "secrets:post": "rule:admin_or_creator",
+    "secrets:get": "rule:admin_or_creator"
+}

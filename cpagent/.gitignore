@@ -1,0 +1,20 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+.vs/
+
+## Barbican Runtime
+barbican-env/
+barbican-config/barbican.db
+dist/
+logs/
+/run/
+
+## Build artifacts
+*.dll
+*.exe
+*.pdb
+publish/

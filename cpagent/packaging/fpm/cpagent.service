@@ -1,0 +1,20 @@
+[Unit]
+Description=CpAgent Service (.NET)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/cpagent
+ExecStart=/opt/cpagent/cpagent --urls=http://0.0.0.0:5000
+Restart=always
+RestartSec=10
+Environment=DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
+Environment=Barbican__VirtualEnvPath=/opt/cpagent/barbican-env
+Environment=Barbican__ConfigPath=/etc/barbican
+Environment=Barbican__LogPath=/var/log/barbican/barbican.log
+Environment=Barbican__UseSecureGateway=true
+Environment=Barbican__UseNamespaceIsolation=true
+
+[Install]
+WantedBy=multi-user.target

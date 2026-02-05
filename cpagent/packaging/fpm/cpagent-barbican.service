@@ -1,0 +1,15 @@
+[Unit]
+Description=Barbican API (venv) for CpAgent
+After=network.target rabbitmq-server.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/cpagent
+Environment=PATH=/opt/cpagent/barbican-env/bin:/usr/bin
+ExecStart=/opt/cpagent/barbican-env/bin/barbican-wsgi-api --host 127.0.0.1 --port 9311 -- --config-file /etc/barbican/barbican.conf --config-file /etc/barbican/barbican-api-paste.ini
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

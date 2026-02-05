@@ -1,0 +1,17 @@
+# Barbican vTPM Crypto Plugin Requirements
+
+# Core Barbican dependency
+barbican>=14.0.0
+
+# TPM 2.0 Python bindings
+tpm2-pytss>=2.0.0
+
+# Cryptography library
+cryptography>=41.0.0
+
+# Oslo logging for OpenStack integration
+oslo.log>=5.0.0
+oslo.config>=9.0.0
+
+# Python standard library equivalents (if needed)
+# These are typically already available in OpenStack environments
