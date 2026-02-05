@@ -12,6 +12,7 @@ public class BarbicanClient
 
     public BarbicanClient(ILogger<BarbicanClient> logger, BarbicanManager barbicanManager)
     {
+        
         _logger = logger;
         _barbicanManager = barbicanManager;
         
